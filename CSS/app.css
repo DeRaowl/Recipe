@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffffff, #ece9e6);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mobile-container {
+  background-color: #fff;
+  width: 400px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+header input {
+  background-color: #eee;
+  border-radius: 3px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+header button {
+  background-color: transparent;
+  color: #aaa;
+  font-size: 1.5rem;
+  border: none;
+  margin-left: 10px;
+}
+
+.fav-contanier {
+  padding: 1rem;
+  text-align: center;
+}
+
+.fav-meals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.fav-meals li {
+}
+
+.fav-meals li img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+}
