@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #ece9e6; /* fallback for old browsers */
+  background: #ece9e6;
   background: -webkit-linear-gradient(
     to left,
     #ffffff,
@@ -13,6 +13,7 @@ body {
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ffffff, #ece9e6);
   display: flex;
+  align-items: center;
   justify-content: center;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
@@ -25,7 +26,10 @@ img {
 
 .mobile-container {
   background-color: #fff;
-  width: 400px;
+  width: 350px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /* overflow: hidden; */
 }
 
 header {
@@ -39,19 +43,21 @@ header input {
   background-color: #eee;
   border-radius: 3px;
   border: none;
+  font-family: inherit;
   padding: 0.5rem 1rem;
 }
 
 header button {
-  background-color: transparent;
+  background-color: #eee;
   color: #aaa;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: none;
-  margin-left: 10px;
+  margin-left: -40px;
 }
 
-.fav-contanier {
-  padding: 1rem;
+.fav-container {
+  background: rgb(236, 223, 243);
+  padding: 0.25rem 1rem;
   text-align: center;
 }
 
@@ -59,16 +65,72 @@ header button {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
   padding: 0;
   list-style: none;
 }
 
 .fav-meals li {
+  width: 85px;
 }
 
 .fav-meals li img {
+  border: 2px solid #fff;
+
   border-radius: 50%;
   object-fit: cover;
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
+}
+
+.fav-meals li span {
+  font-size: 0.8rem;
+}
+
+.meal {
+  border-radius: 3px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  margin: 1.4rem;
+  overflow: hidden;
+}
+
+.meal-header {
+  position: relative;
+}
+
+.meal-header .random {
+  position: absolute;
+  top: 1rem;
+  background-color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.meal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.meal-body h4 {
+  margin: 0;
+}
+
+.meal-body .fav-btn {
+  border: none;
+  background-color: transparent;
+  color: rgb(207, 201, 201);
+  font-size: 1.2rem;
+}
+
+.meal-body .fav-btn:active {
+  color: rgb(145, 145, 145);
 }
