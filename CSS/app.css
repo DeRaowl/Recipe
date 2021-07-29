@@ -6,11 +6,7 @@
 
 body {
   background: #ece9e6;
-  background: -webkit-linear-gradient(
-    to left,
-    #ffffff,
-    #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to left, #ffffff, #ece9e6);
   background: linear-gradient(to left, #ffffff, #ece9e6);
   display: flex;
   align-items: center;
@@ -27,9 +23,9 @@ img {
 .mobile-container {
   background-color: #fff;
   width: 350px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 2px #3333331a;
   border-radius: 10px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 header {
@@ -44,15 +40,15 @@ header input {
   border-radius: 3px;
   border: none;
   font-family: inherit;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
 }
 
 header button {
-  background-color: #eee;
+  background-color: transparent;
   color: #aaa;
   font-size: 1.2rem;
   border: none;
-  margin-left: -40px;
+  margin-left: 8px;
 }
 
 .fav-container {
@@ -75,12 +71,13 @@ header button {
 }
 
 .fav-meals li img {
-  border: 2px solid #fff;
-
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px 2px #3333331a;
   border-radius: 50%;
   object-fit: cover;
-  height: 75px;
-  width: 75px;
+  height: 70px;
+  width: 70px;
+  object-position: center;
 }
 
 .fav-meals li span {
@@ -92,13 +89,10 @@ header button {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   margin: 1.4rem;
   overflow: hidden;
-}
-
-.meal-header {
   position: relative;
 }
 
-.meal-header .random {
+.meal .random {
   position: absolute;
   top: 1rem;
   background-color: #fff;
@@ -127,10 +121,12 @@ header button {
 .meal-body .fav-btn {
   border: none;
   background-color: transparent;
-  color: rgb(207, 201, 201);
+  color: rgb(224, 219, 219);
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.meal-body .fav-btn:active {
-  color: rgb(145, 145, 145);
+.meal-body .fav-btn.active {
+  color: rebeccapurple;
+  cursor: pointer;
 }
